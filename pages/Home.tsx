@@ -101,10 +101,11 @@ const Home: React.FC = () => {
         <div className="max-w-[1120px] mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="relative order-2 md:order-1">
-              <div 
-                className="aspect-square bg-cover bg-center rounded-lg overflow-hidden shadow-xl" 
-                style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuAqEASWsoRYhfuupt9tORu5SJNZREFLgJv22XF9-j-dYf82JS3rVc-LFI10G6PLKb3IMiIAdoEeNPi1UDX8GQQepHDTHR-c1YsORHi0yK9ABXVhtrBO8xGNO4BIPVYssF5S2qf7msBrLsstXOtrXGBsK5quxVwquy07jCXCsT7mH3k4TRC0zNZRyzrGNo5a1-I8F7V-h7lVhOJePyBU0Ot3qmq5sziFl41hx0ktZc5u1egTBN0j6cdYfnllRyu-wriFU0fnv639jmtg")' }}
-              ></div>
+              <img 
+                src="/abordagem-sessao.png" 
+                alt="Sessão de terapia - Cláudia Cruz" 
+                className="w-full aspect-square object-cover rounded-lg shadow-xl"
+              />
             </div>
             <div className="flex flex-col gap-8 order-1 md:order-2 items-start">
               <div className="space-y-4 text-left">
