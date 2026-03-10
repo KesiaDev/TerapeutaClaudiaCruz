@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import abordagemSessao from '../src/assets/abordagem-sessao.png';
 
 const Home: React.FC = () => {
   return (
@@ -102,7 +103,7 @@ const Home: React.FC = () => {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="relative order-2 md:order-1">
               <img 
-                src="/abordagem-sessao.png" 
+                src={abordagemSessao} 
                 alt="Sessão de terapia - Cláudia Cruz" 
                 className="w-full aspect-square object-cover rounded-lg shadow-xl"
               />

@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import claudiaSobre from '../src/assets/claudia-sobre.png';
 
 const Sobre: React.FC = () => {
   return (
@@ -23,7 +24,7 @@ const Sobre: React.FC = () => {
             </div>
             <div className="order-1 md:order-2">
               <img 
-                src="/claudia-sobre.png" 
+                src={claudiaSobre} 
                 alt="Cláudia Cruz - Terapeuta" 
                 className="w-full aspect-[4/5] object-cover rounded-2xl shadow-xl"
               />
