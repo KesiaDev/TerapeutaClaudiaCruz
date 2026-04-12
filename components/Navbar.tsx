@@ -19,14 +19,14 @@ const Navbar: React.FC = () => {
 
   return (
     <header className="sticky top-0 z-50 bg-[#F7F4EE]/90 backdrop-blur-md border-b border-[#1F4D4A]/10">
-      <div className="max-w-[1200px] mx-auto h-20 px-6 flex items-center justify-between">
+      <div className="max-w-[1200px] mx-auto min-h-[5rem] px-4 sm:px-6 py-3 flex items-center justify-between">
         <Link to="/" className="flex min-w-0 items-center shrink-0">
           <img
             src={brand.horizontal}
             alt="Cláudia Cruz Terapeuta"
-            className="h-8 w-auto max-w-[min(100%,200px)] object-contain object-left sm:h-9 sm:max-w-[220px] md:h-10 md:max-w-[260px]"
-            width={260}
-            height={40}
+            className="h-11 w-auto max-w-[min(100%,280px)] object-contain object-left sm:h-12 sm:max-w-[300px] md:h-14 md:max-w-[340px] lg:h-16 lg:max-w-[380px]"
+            width={380}
+            height={64}
             decoding="async"
           />
         </Link>
@@ -62,7 +62,7 @@ const Navbar: React.FC = () => {
             <img
               src={brand.marca}
               alt=""
-              className="h-12 w-auto max-w-[180px] object-contain"
+              className="h-16 w-auto max-w-[240px] object-contain sm:h-[4.5rem] sm:max-w-[260px]"
               aria-hidden
             />
           </div>

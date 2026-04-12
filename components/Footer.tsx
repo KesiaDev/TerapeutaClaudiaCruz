@@ -8,13 +8,13 @@ const Footer: React.FC = () => {
       <div className="max-w-[1120px] mx-auto px-6">
         <div className="grid md:grid-cols-3 gap-16">
           <div className="space-y-6 text-left">
-            <Link to="/" className="inline-flex rounded-lg bg-white p-2.5 shadow-sm transition-opacity hover:opacity-95">
+            <Link to="/" className="inline-flex rounded-lg bg-white p-3 shadow-sm transition-opacity hover:opacity-95">
               <img
                 src={brand.horizontal}
                 alt="Cláudia Cruz Terapeuta"
-                className="h-8 w-auto max-w-[200px] object-contain md:h-9 md:max-w-[220px]"
-                width={220}
-                height={36}
+                className="h-11 w-auto max-w-[260px] object-contain sm:h-12 sm:max-w-[280px] md:h-14 md:max-w-[300px] lg:h-16 lg:max-w-[340px]"
+                width={340}
+                height={56}
                 decoding="async"
               />
             </Link>
@@ -82,7 +82,7 @@ const Footer: React.FC = () => {
             <img
               src={brand.caracteres}
               alt=""
-              className="h-5 w-auto max-w-full opacity-70 md:h-6"
+              className="h-6 w-auto max-w-full opacity-70 md:h-7"
               aria-hidden
             />
           </div>
