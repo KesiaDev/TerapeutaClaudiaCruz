@@ -37,7 +37,7 @@ const Home: React.FC = () => {
             <div className="relative">
               <div
                 className="aspect-[4/5] bg-cover bg-center rounded-lg shadow-xl"
-                style={{ backgroundImage: 'url("/hero-claudia-cruz.png")' }}
+                style={{ backgroundImage: `url("${import.meta.env.BASE_URL}hero-claudia-cruz.png")` }}
                 role="img"
                 aria-label="Cláudia Cruz, terapeuta"
               />
