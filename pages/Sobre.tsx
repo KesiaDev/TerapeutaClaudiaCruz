@@ -8,7 +8,7 @@ const Sobre: React.FC = () => {
     <div className="bg-[#f7f4ee] overflow-x-hidden">
       {/* Banner full-bleed: foto de fundo (parede à esquerda) + texto sobre o espaço vazio */}
       <section
-        className="relative flex min-h-[min(92vh,980px)] w-screen max-w-[100vw] -translate-x-1/2 left-1/2 items-center"
+        className="relative flex min-h-[min(58vh,520px)] sm:min-h-[min(62vh,560px)] md:min-h-[min(64vh,600px)] lg:min-h-[min(66vh,640px)] w-screen max-w-[100vw] -translate-x-1/2 left-1/2 items-center"
         aria-label="Sobre Mim"
       >
         <div className="pointer-events-none absolute inset-0">
@@ -25,7 +25,7 @@ const Sobre: React.FC = () => {
             aria-hidden
           />
         </div>
-        <div className="relative z-10 mx-auto flex w-full max-w-[1200px] items-center px-5 py-16 sm:px-8 md:px-10 md:py-20 lg:px-12">
+        <div className="relative z-10 mx-auto flex w-full max-w-[1200px] items-center px-5 py-10 sm:px-8 sm:py-12 md:px-10 md:py-14 lg:px-12">
           <div className="max-w-lg md:max-w-xl lg:max-w-[26rem] text-left drop-shadow-[0_1px_1px_rgba(247,244,238,0.8)]">
             <span className="inline-block text-[#c46a3a] text-sm font-bold uppercase tracking-widest mb-4">Sobre Mim</span>
             <h1 className="text-[#2d5a57] text-3xl font-bold leading-tight mb-5 font-fraunces sm:text-4xl lg:text-[2.5rem]">
