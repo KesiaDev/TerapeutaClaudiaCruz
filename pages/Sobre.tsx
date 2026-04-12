@@ -5,34 +5,41 @@ import claudiaSobre from '../src/assets/claudia-sobre.png';
 
 const Sobre: React.FC = () => {
   return (
-    <div className="bg-[#f7f4ee]">
-      {/* Hero: texto compacto + foto em destaque tipo banner */}
-      <section className="relative w-full py-12 md:py-16 lg:py-20 overflow-x-hidden">
-        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-10 w-full">
-          <div className="flex flex-col lg:flex-row lg:items-center gap-10 lg:gap-12 xl:gap-16">
-            <div className="order-2 lg:order-1 w-full lg:max-w-md xl:max-w-[28rem] shrink-0 bg-white/90 backdrop-blur-xl p-8 md:p-10 rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.08)] border border-white/80 flex flex-col items-start text-left lg:py-12">
-              <span className="inline-block text-[#c46a3a] text-sm font-bold uppercase tracking-widest mb-4">Sobre Mim</span>
-              <h1 className="text-[#2d5a57] text-3xl lg:text-4xl xl:text-[2.5rem] font-bold leading-tight mb-5 font-fraunces">
-                Escuta experiente e humanidade no centro do seu processo.
-              </h1>
-              <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-8">
-                Olá, sou Cláudia Cruz. Minha trajetória é pautada pelo acolhimento técnico e sensível, onde cada paciente encontra o suporte necessário para navegar suas emoções e construir uma vida mais equilibrada.
-              </p>
-              <Link to="/contato" className="flex items-center justify-center rounded-lg h-12 px-8 md:px-10 bg-[#c46a3a] text-white text-sm md:text-base font-bold hover:brightness-110 transition-all shadow-md shrink-0">
-                Minha Trajetória
-              </Link>
-            </div>
-            <div className="order-1 lg:order-2 flex-1 min-w-0 w-full">
-              <div className="relative w-full rounded-2xl lg:rounded-3xl shadow-2xl bg-gradient-to-br from-[#e8ece9] to-[#dde5e2] min-h-[min(58vh,640px)] md:min-h-[min(72vh,800px)] lg:min-h-[min(82vh,920px)] flex items-center justify-center p-3 sm:p-5 lg:p-6">
-                <img
-                  src={claudiaSobre}
-                  alt="Cláudia Cruz - Terapeuta"
-                  className="w-full h-full max-h-[min(56vh,620px)] md:max-h-[min(70vh,780px)] lg:max-h-[min(80vh,900px)] object-contain object-center"
-                  loading="eager"
-                  decoding="async"
-                />
-              </div>
-            </div>
+    <div className="bg-[#f7f4ee] overflow-x-hidden">
+      {/* Banner full-bleed: foto de fundo (parede à esquerda) + texto sobre o espaço vazio */}
+      <section
+        className="relative flex min-h-[min(92vh,980px)] w-screen max-w-[100vw] -translate-x-1/2 left-1/2 items-center"
+        aria-label="Sobre Mim"
+      >
+        <div className="pointer-events-none absolute inset-0">
+          <img
+            src={claudiaSobre}
+            alt=""
+            className="h-full w-full object-cover object-left md:object-[28%_center]"
+            loading="eager"
+            decoding="async"
+          />
+          {/* Leitura sobre a parede: vê-se o fundo mas o texto ganha contraste */}
+          <div
+            className="absolute inset-0 bg-gradient-to-r from-[#f7f4ee]/95 via-[#f7f4ee]/55 to-transparent sm:via-[#f7f4ee]/40 md:via-[#f7f4ee]/30 md:to-transparent"
+            aria-hidden
+          />
+        </div>
+        <div className="relative z-10 mx-auto flex w-full max-w-[1200px] items-center px-5 py-16 sm:px-8 md:px-10 md:py-20 lg:px-12">
+          <div className="max-w-lg md:max-w-xl lg:max-w-[26rem] text-left drop-shadow-[0_1px_1px_rgba(247,244,238,0.8)]">
+            <span className="inline-block text-[#c46a3a] text-sm font-bold uppercase tracking-widest mb-4">Sobre Mim</span>
+            <h1 className="text-[#2d5a57] text-3xl font-bold leading-tight mb-5 font-fraunces sm:text-4xl lg:text-[2.5rem]">
+              Escuta experiente e humanidade no centro do seu processo.
+            </h1>
+            <p className="text-[#3d4f4d] text-base leading-relaxed md:text-lg mb-8">
+              Olá, sou Cláudia Cruz. Minha trajetória é pautada pelo acolhimento técnico e sensível, onde cada paciente encontra o suporte necessário para navegar suas emoções e construir uma vida mais equilibrada.
+            </p>
+            <Link
+              to="/contato"
+              className="inline-flex items-center justify-center rounded-lg h-12 px-8 md:px-10 bg-[#c46a3a] text-white text-sm md:text-base font-bold shadow-md transition-all hover:brightness-110"
+            >
+              Minha Trajetória
+            </Link>
           </div>
         </div>
       </section>
