@@ -104,16 +104,18 @@ const Sobre: React.FC = () => {
                 ))}
               </div>
             </div>
-            {/* Map Placeholder */}
-            <div className="flex-1 h-[450px] rounded border-4 border-white shadow-lg overflow-hidden grayscale contrast-125 opacity-70">
-              <div className="w-full h-full bg-[#d8dcd1] flex items-center justify-center relative">
-                <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(#2d5a57 1px, transparent 1px)", backgroundSize: "16px 16px" }}></div>
-                <div className="text-center z-10 p-10 bg-white/80 backdrop-blur-sm rounded">
-                  <span className="material-symbols-outlined !text-5xl text-[#2d5a57] mb-4">map</span>
-                  <p className="text-sm font-semibold text-[#2d5a57] uppercase tracking-widest">Mapa de Atendimento</p>
-                  <p className="text-xs text-gray-600 mt-2">Presença e Conectividade</p>
-                </div>
-              </div>
+            {/* Google Maps - Aba Neuro Clinic */}
+            <div className="flex-1 h-[450px] rounded-xl border border-white shadow-lg overflow-hidden bg-[#d8dcd1]">
+              <iframe
+                title="Mapa de Atendimento - Aba Neuro Clinic"
+                src="https://www.google.com/maps?q=Rua+Cirurgi%C3%A3o+Vaz+Ferreira,+591,+Bairro+Centro,+Viam%C3%A3o+-+RS&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
           </div>
         </div>

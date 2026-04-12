@@ -17,7 +17,7 @@ const Conteudos: React.FC = () => {
               Conteúdos para respirar, entender e reorganizar o caminho
             </h1>
             <p className="text-lg text-[#6B655F] max-w-prose leading-relaxed">
-              Reflexões sobre psicologia, comportamento e bem-estar para apoiar sua jornada de autoconhecimento e desenvolvimento profissional.
+              Reflexões sobre saúde emocional, comportamento e bem-estar para apoiar sua jornada de autoconhecimento e desenvolvimento.
             </p>
           </div>
         </div>
