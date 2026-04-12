@@ -6,16 +6,16 @@ import claudiaSobre from '../src/assets/claudia-sobre.png';
 const Sobre: React.FC = () => {
   return (
     <div className="bg-[#f7f4ee] overflow-x-hidden">
-      {/* Banner panorâmico full-bleed (corte tipo print): faixa baixa + object-cover + foco parede/texto à esq. e retrato à dir. */}
+      {/* Banner full-bleed: faixa mais alta para não “comer” cabeça/braços; enquadramento centrado no corpo */}
       <section
         className="relative w-screen max-w-[100vw] -translate-x-1/2 left-1/2 overflow-hidden bg-[#e8ebe7]"
         aria-label="Sobre Mim"
       >
-        <div className="relative h-[clamp(280px,24vw,500px)] min-h-[280px] w-full sm:h-[clamp(300px,22vw,520px)] md:min-h-[300px]">
+        <div className="relative min-h-[400px] h-[clamp(400px,min(52vh,720px),760px)] w-full sm:min-h-[440px]">
           <img
             src={claudiaSobre}
             alt=""
-            className="pointer-events-none absolute inset-0 h-full w-full object-cover object-[30%_32%] sm:object-[28%_30%] md:object-[26%_28%] lg:object-[24%_26%]"
+            className="pointer-events-none absolute inset-0 h-full w-full object-cover object-[27%_40%] sm:object-[26%_38%] md:object-[25%_36%] lg:object-[24%_34%]"
             loading="eager"
             decoding="async"
           />
