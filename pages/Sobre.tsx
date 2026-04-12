@@ -6,16 +6,16 @@ import claudiaSobre from '../src/assets/claudia-sobre.png';
 const Sobre: React.FC = () => {
   return (
     <div className="bg-[#f7f4ee] overflow-x-hidden">
-      {/* Banner full-bleed: faixa mais alta para não “comer” cabeça/braços; enquadramento centrado no corpo */}
+      {/* Banner alto: mais área vertical para cabeça + mãos; object-position prioriza topo do cabelo e corpo inteiro */}
       <section
         className="relative w-screen max-w-[100vw] -translate-x-1/2 left-1/2 overflow-hidden bg-[#e8ebe7]"
         aria-label="Sobre Mim"
       >
-        <div className="relative min-h-[400px] h-[clamp(400px,min(52vh,720px),760px)] w-full sm:min-h-[440px]">
+        <div className="relative min-h-[480px] h-[clamp(480px,min(62vh,900px),920px)] w-full sm:min-h-[520px]">
           <img
             src={claudiaSobre}
             alt=""
-            className="pointer-events-none absolute inset-0 h-full w-full object-cover object-[27%_40%] sm:object-[26%_38%] md:object-[25%_36%] lg:object-[24%_34%]"
+            className="pointer-events-none absolute inset-0 h-full w-full object-cover object-[24%_22%] sm:object-[23%_20%] md:object-[22%_19%] lg:object-[21%_18%]"
             loading="eager"
             decoding="async"
           />
