@@ -7,27 +7,31 @@ const Sobre: React.FC = () => {
   return (
     <div className="bg-[#f7f4ee]">
       {/* Hero com texto e foto lado a lado */}
-      <section className="relative w-full min-h-[600px] overflow-hidden flex items-center py-16 md:py-24">
+      <section className="relative w-full py-16 md:py-24">
         <div className="max-w-[1200px] mx-auto px-6 w-full">
-          <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <div className="order-2 md:order-1 bg-white/90 backdrop-blur-xl p-8 md:p-12 rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.08)] border border-white/80 flex flex-col items-start text-left">
+          <div className="grid md:grid-cols-2 gap-10 lg:gap-14 items-start">
+            <div className="order-2 md:order-1 bg-white/90 backdrop-blur-xl p-8 md:p-10 rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.08)] border border-white/80 flex flex-col items-start text-left md:max-w-xl md:justify-self-end w-full">
               <span className="inline-block text-[#c46a3a] text-sm font-bold uppercase tracking-widest mb-4">Sobre Mim</span>
-              <h1 className="text-[#2d5a57] text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight mb-6 font-fraunces">
+              <h1 className="text-[#2d5a57] text-3xl lg:text-4xl xl:text-[2.5rem] font-bold leading-tight mb-5 font-fraunces">
                 Escuta experiente e humanidade no centro do seu processo.
               </h1>
-              <p className="text-gray-600 text-lg leading-relaxed mb-8 max-w-[540px]">
+              <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-8">
                 Olá, sou Cláudia Cruz. Minha trajetória é pautada pelo acolhimento técnico e sensível, onde cada paciente encontra o suporte necessário para navegar suas emoções e construir uma vida mais equilibrada.
               </p>
-              <Link to="/contato" className="flex items-center justify-center rounded h-12 px-10 bg-[#c46a3a] text-white font-bold hover:brightness-110 transition-all shadow-md">
+              <Link to="/contato" className="flex items-center justify-center rounded-lg h-12 px-8 md:px-10 bg-[#c46a3a] text-white text-sm md:text-base font-bold hover:brightness-110 transition-all shadow-md shrink-0">
                 Minha Trajetória
               </Link>
             </div>
-            <div className="order-1 md:order-2">
-              <img 
-                src={claudiaSobre} 
-                alt="Cláudia Cruz - Terapeuta" 
-                className="w-full aspect-[4/5] object-cover rounded-2xl shadow-xl"
-              />
+            <div className="order-1 md:order-2 w-full flex justify-center md:justify-end md:pl-2">
+              <div className="w-full max-w-[min(100%,420px)] lg:max-w-[480px] rounded-2xl bg-[#eef3f1] p-3 sm:p-4 shadow-xl">
+                <img
+                  src={claudiaSobre}
+                  alt="Cláudia Cruz - Terapeuta"
+                  className="w-full h-auto max-h-[min(92vh,720px)] object-contain object-center rounded-xl"
+                  loading="eager"
+                  decoding="async"
+                />
+              </div>
             </div>
           </div>
         </div>
