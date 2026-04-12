@@ -11,11 +11,12 @@ const Sobre: React.FC = () => {
         className="relative flex min-h-[min(62vh,560px)] sm:min-h-[min(64vh,580px)] md:min-h-[min(66vh,620px)] lg:min-h-[min(68vh,660px)] w-screen max-w-[100vw] -translate-x-1/2 left-1/2 items-center"
         aria-label="Sobre Mim"
       >
-        <div className="pointer-events-none absolute inset-0">
+        <div className="pointer-events-none absolute inset-0 bg-[#e8ebe7]">
+          {/* object-contain = foto inteira sem crop; object-right = encosta à direita; faixas à esq. com fundo */}
           <img
             src={claudiaSobre}
             alt=""
-            className="h-full w-full object-cover object-[22%_0%] sm:object-[24%_0%] md:object-[26%_0%] lg:object-[28%_0%]"
+            className="h-full w-full object-contain object-right"
             loading="eager"
             decoding="async"
           />
