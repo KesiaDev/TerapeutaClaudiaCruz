@@ -44,9 +44,9 @@ const Navbar: React.FC = () => {
               {item.label}
             </Link>
           ))}
-          <Link to="/contato" className="bg-[#c46a3a] text-white px-5 py-2.5 rounded-md text-sm font-semibold hover:bg-opacity-90 transition-all shadow-sm ml-2">
+          <a href="https://psipro-dashboard-production.up.railway.app/calendar" target="_blank" rel="noopener noreferrer" className="bg-[#c46a3a] text-white px-5 py-2.5 rounded-md text-sm font-semibold hover:bg-opacity-90 transition-all shadow-sm ml-2">
             Agendar Consulta
-          </Link>
+          </a>
         </nav>
 
         {/* Mobile Toggle */}
@@ -76,13 +76,15 @@ const Navbar: React.FC = () => {
               {item.label}
             </Link>
           ))}
-          <Link
-            to="/contato"
+          <a
+            href="https://psipro-dashboard-production.up.railway.app/calendar"
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => setIsMenuOpen(false)}
             className="bg-[#c46a3a] text-white px-5 py-3 rounded-md text-center font-bold"
           >
             Agendar Agora
-          </Link>
+          </a>
         </div>
       )}
     </header>

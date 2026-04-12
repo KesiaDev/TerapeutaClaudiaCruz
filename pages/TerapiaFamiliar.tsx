@@ -82,12 +82,14 @@ const TerapiaFamiliar: React.FC = () => {
               Restaure a harmonia, melhore a comunicação e fortaleça os vínculos afetivos através de uma abordagem acolhedora e baseada em evidências científicas.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link
-                to="/contato"
+              <a
+                href="https://psipro-dashboard-production.up.railway.app/calendar"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-[#1f4d4a] text-white px-8 py-3.5 rounded-md font-bold hover:bg-[#1f4d4a]/90 transition-all"
               >
                 Agendar Consulta
-              </Link>
+              </a>
               <Link
                 to="/como-funciona"
                 className="bg-white border-2 border-[#1f4d4a] text-[#1f4d4a] px-8 py-3.5 rounded-md font-bold hover:bg-[#1f4d4a]/5 transition-all"
@@ -253,12 +255,14 @@ const TerapiaFamiliar: React.FC = () => {
             Prontos para começar uma nova etapa?
           </h2>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              to="/contato"
+            <a
+              href="https://psipro-dashboard-production.up.railway.app/calendar"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block bg-white text-[#1f4d4a] px-10 py-4 rounded-md font-bold hover:bg-white/90 transition-all"
             >
               Agendar minha consulta
-            </Link>
+            </a>
             <a
               href="https://wa.me/5551987654321"
               className="inline-flex items-center gap-2 bg-[#1f4d4a] border-2 border-white text-white px-10 py-4 rounded-md font-bold hover:bg-white hover:text-[#1f4d4a] transition-all"

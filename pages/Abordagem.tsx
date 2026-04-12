@@ -84,9 +84,9 @@ const Abordagem: React.FC = () => {
                 <span className="material-symbols-outlined text-5xl">calendar_month</span>
                 <h3 className="text-2xl font-bold font-display">Pronto para começar?</h3>
                 <p className="text-white/80 font-light">Agende uma primeira conversa e descubra qual abordagem melhor se adapta ao seu momento.</p>
-                <Link to="/contato" className="w-full bg-white text-[#c46a3a] font-bold py-4 rounded-lg hover:bg-slate-50 transition-colors shadow-sm">
+                <a href="https://psipro-dashboard-production.up.railway.app/calendar" target="_blank" rel="noopener noreferrer" className="w-full bg-white text-[#c46a3a] font-bold py-4 rounded-lg hover:bg-slate-50 transition-colors shadow-sm text-center block">
                   Agendar agora
-                </Link>
+                </a>
               </div>
             ) : (
               <div key={idx} className="flex flex-col gap-5 p-6 bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition-all">

@@ -210,12 +210,14 @@ const AtendimentoAdolescentes: React.FC = () => {
           <p className="text-white/85 mb-8 max-w-2xl mx-auto">
             Agende uma conversa inicial e descubra um espaço seguro para essa fase.
           </p>
-          <Link
-            to="/contato"
+          <a
+            href="https://psipro-dashboard-production.up.railway.app/calendar"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block bg-[#c46a3a] text-white px-10 py-4 rounded-md font-bold hover:bg-[#c46a3a]/90 transition-all"
           >
             Agendar agora
-          </Link>
+          </a>
         </div>
       </section>
     </div>

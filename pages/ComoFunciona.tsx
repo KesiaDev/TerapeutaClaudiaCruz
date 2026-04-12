@@ -14,9 +14,9 @@ const ComoFunciona: React.FC = () => {
             Um processo estruturado para entender o que está pesando hoje, definir um caminho possível e aplicar estratégias no cotidiano — com acolhimento, clareza e continuidade.
           </p>
           <div className="flex flex-wrap gap-4 mb-4">
-            <Link to="/contato" className="bg-[#c46a3a] text-white px-8 py-4 rounded font-bold hover:shadow-lg transition-all">
+            <a href="https://psipro-dashboard-production.up.railway.app/calendar" target="_blank" rel="noopener noreferrer" className="bg-[#c46a3a] text-white px-8 py-4 rounded font-bold hover:shadow-lg transition-all">
               Agendar consulta
-            </Link>
+            </a>
             <a href="https://wa.me/5551987654321" className="flex items-center gap-2 border-2 border-[#1f4d4a] text-[#1f4d4a] px-8 py-4 rounded font-bold hover:bg-[#1f4d4a] hover:text-white transition-all">
               <span className="material-symbols-outlined text-xl">chat</span>
               Falar no WhatsApp
@@ -137,9 +137,9 @@ const ComoFunciona: React.FC = () => {
             <p className="text-lg text-white/80 mb-10 leading-relaxed">
               Se você sente que é o momento de olhar para suas questões com clareza e acolhimento, agende uma conversa inicial. Estou à disposição para te acompanhar.
             </p>
-            <Link to="/contato" className="bg-white text-[#1f4d4a] px-10 py-4 rounded font-bold hover:bg-white/90 transition-all inline-block">
+            <a href="https://psipro-dashboard-production.up.railway.app/calendar" target="_blank" rel="noopener noreferrer" className="bg-white text-[#1f4d4a] px-10 py-4 rounded font-bold hover:bg-white/90 transition-all inline-block">
               Agendar minha primeira sessão
-            </Link>
+            </a>
           </div>
         </section>
       </main>
