@@ -44,7 +44,7 @@ const Navbar: React.FC = () => {
               {item.label}
             </Link>
           ))}
-          <a href="https://psipro-dashboard-production.up.railway.app/calendar" target="_blank" rel="noopener noreferrer" className="bg-[#c46a3a] text-white px-5 py-2.5 rounded-md text-sm font-semibold hover:bg-opacity-90 transition-all shadow-sm ml-2">
+          <a href="/#/agendar" className="bg-[#c46a3a] text-white px-5 py-2.5 rounded-md text-sm font-semibold hover:bg-opacity-90 transition-all shadow-sm ml-2">
             Agendar Consulta
           </a>
         </nav>
@@ -77,9 +77,7 @@ const Navbar: React.FC = () => {
             </Link>
           ))}
           <a
-            href="https://psipro-dashboard-production.up.railway.app/calendar"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/#/agendar"
             onClick={() => setIsMenuOpen(false)}
             className="bg-[#c46a3a] text-white px-5 py-3 rounded-md text-center font-bold"
           >

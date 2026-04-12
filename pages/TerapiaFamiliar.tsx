@@ -83,7 +83,7 @@ const TerapiaFamiliar: React.FC = () => {
             </p>
             <div className="flex flex-wrap gap-4">
               <a
-                href="https://psipro-dashboard-production.up.railway.app/calendar"
+                href="/#/agendar"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-[#1f4d4a] text-white px-8 py-3.5 rounded-md font-bold hover:bg-[#1f4d4a]/90 transition-all"
@@ -256,7 +256,7 @@ const TerapiaFamiliar: React.FC = () => {
           </h2>
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="https://psipro-dashboard-production.up.railway.app/calendar"
+              href="/#/agendar"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-white text-[#1f4d4a] px-10 py-4 rounded-md font-bold hover:bg-white/90 transition-all"

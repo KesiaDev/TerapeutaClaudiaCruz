@@ -22,7 +22,7 @@ const Home: React.FC = () => {
               </div>
               <div className="flex flex-col items-start gap-4">
                 <div className="flex flex-wrap gap-4">
-                  <a href="https://psipro-dashboard-production.up.railway.app/calendar" target="_blank" rel="noopener noreferrer" className="bg-[#c46a3a] text-white px-8 py-4 rounded-md font-bold hover:bg-opacity-90 transition-all">
+                  <a href="/#/agendar" className="bg-[#c46a3a] text-white px-8 py-4 rounded-md font-bold hover:bg-opacity-90 transition-all">
                     Agendar Atendimento
                   </a>
                   <a href="https://wa.me/5551987654321" className="border border-[#c46a3a] text-[#c46a3a] px-8 py-4 rounded-md font-bold hover:bg-[#c46a3a]/5 transition-all">

@@ -24,7 +24,7 @@ const Contact: React.FC = () => {
             <span className="material-symbols-outlined">chat</span>
             WhatsApp
           </a>
-          <a href="https://psipro-dashboard-production.up.railway.app/calendar" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 min-w-[180px] cursor-pointer justify-center rounded-lg h-12 px-6 bg-white border-2 border-[#1f4c4a]/10 text-[#1f4c4a] text-base font-bold transition-transform hover:scale-105">
+          <a href="/#/agendar" className="flex items-center gap-2 min-w-[180px] cursor-pointer justify-center rounded-lg h-12 px-6 bg-white border-2 border-[#1f4c4a]/10 text-[#1f4c4a] text-base font-bold transition-transform hover:scale-105">
             <span className="material-symbols-outlined">calendar_today</span>
             Agenda Online
           </a>

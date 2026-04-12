@@ -96,7 +96,7 @@ const Conteudos: React.FC = () => {
             <div className="p-10 bg-[#2C5F5A] text-white rounded shadow-xl">
               <h4 className="text-2xl font-semibold mb-4 font-fraunces">Atendimento Individual</h4>
               <p className="text-white/80 mb-8">Inicie seu processo terapêutico com acompanhamento especializado focado no seu desenvolvimento pessoal e saúde emocional.</p>
-              <a href="https://psipro-dashboard-production.up.railway.app/calendar" target="_blank" rel="noopener noreferrer" className="w-full md:w-auto bg-[#C86D44] hover:bg-[#C86D44]/90 text-white font-bold py-3 px-8 rounded transition-all inline-block text-center">
+              <a href="/#/agendar" className="w-full md:w-auto bg-[#C86D44] hover:bg-[#C86D44]/90 text-white font-bold py-3 px-8 rounded transition-all inline-block text-center">
                 Agendar uma Consulta
               </a>
             </div>

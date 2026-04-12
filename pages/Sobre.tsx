@@ -143,7 +143,7 @@ const Sobre: React.FC = () => {
             Agende uma primeira conversa e descubra como um processo estruturado pode te ajudar a retomar clareza, autonomia e relações mais saudáveis.
           </p>
           <div className="flex flex-wrap justify-start gap-6">
-            <a href="https://psipro-dashboard-production.up.railway.app/calendar" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center rounded h-14 px-10 bg-[#c46a3a] text-white font-bold hover:brightness-110 transition-all shadow-lg">
+            <a href="/#/agendar" className="flex items-center justify-center rounded h-14 px-10 bg-[#c46a3a] text-white font-bold hover:brightness-110 transition-all shadow-lg">
               Agendar Consulta
             </a>
             <Link to="/como-funciona" className="flex items-center justify-center rounded h-14 px-10 border-2 border-[#c46a3a] text-[#c46a3a] font-bold hover:bg-[#c46a3a] hover:text-white transition-all">
