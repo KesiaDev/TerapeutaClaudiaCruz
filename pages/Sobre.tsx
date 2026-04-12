@@ -8,14 +8,14 @@ const Sobre: React.FC = () => {
     <div className="bg-[#f7f4ee] overflow-x-hidden">
       {/* Banner full-bleed: foto de fundo (parede à esquerda) + texto sobre o espaço vazio */}
       <section
-        className="relative flex min-h-[min(58vh,520px)] sm:min-h-[min(62vh,560px)] md:min-h-[min(64vh,600px)] lg:min-h-[min(66vh,640px)] w-screen max-w-[100vw] -translate-x-1/2 left-1/2 items-center"
+        className="relative flex min-h-[min(62vh,560px)] sm:min-h-[min(64vh,580px)] md:min-h-[min(66vh,620px)] lg:min-h-[min(68vh,660px)] w-screen max-w-[100vw] -translate-x-1/2 left-1/2 items-center"
         aria-label="Sobre Mim"
       >
         <div className="pointer-events-none absolute inset-0">
           <img
             src={claudiaSobre}
             alt=""
-            className="h-full w-full object-cover object-left md:object-[28%_center]"
+            className="h-full w-full object-cover object-[22%_0%] sm:object-[24%_0%] md:object-[26%_0%] lg:object-[28%_0%]"
             loading="eager"
             decoding="async"
           />
