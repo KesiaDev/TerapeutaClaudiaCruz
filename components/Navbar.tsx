@@ -1,6 +1,6 @@
-
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { brand } from '../lib/brandAssets';
 
 const Navbar: React.FC = () => {
   const location = useLocation();
@@ -20,15 +20,15 @@ const Navbar: React.FC = () => {
   return (
     <header className="sticky top-0 z-50 bg-[#F7F4EE]/90 backdrop-blur-md border-b border-[#1F4D4A]/10">
       <div className="max-w-[1200px] mx-auto h-20 px-6 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-3">
-          <div className="text-[#1F4D4A]">
-            <svg className="w-8 h-8" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-              <path clipRule="evenodd" d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z" fill="currentColor" fillRule="evenodd"></path>
-            </svg>
-          </div>
-          <h2 className="text-[#1F4D4A] text-xl font-bold tracking-tight font-fraunces">
-            Cláudia Cruz <span className="font-normal opacity-80 italic">Terapeuta</span>
-          </h2>
+        <Link to="/" className="flex min-w-0 items-center shrink-0">
+          <img
+            src={brand.horizontal}
+            alt="Cláudia Cruz Terapeuta"
+            className="h-8 w-auto max-w-[min(100%,200px)] object-contain object-left sm:h-9 sm:max-w-[220px] md:h-10 md:max-w-[260px]"
+            width={260}
+            height={40}
+            decoding="async"
+          />
         </Link>
 
         {/* Desktop Nav */}
@@ -58,6 +58,14 @@ const Navbar: React.FC = () => {
       {/* Mobile Nav */}
       {isMenuOpen && (
         <div className="lg:hidden bg-white border-b border-gray-100 p-6 flex flex-col gap-4 animate-in fade-in slide-in-from-top-4">
+          <div className="flex justify-center border-b border-gray-100 pb-4">
+            <img
+              src={brand.marca}
+              alt=""
+              className="h-12 w-auto max-w-[180px] object-contain"
+              aria-hidden
+            />
+          </div>
           {navItems.map((item) => (
             <Link
               key={item.path}

@@ -1,6 +1,6 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { brand } from '../lib/brandAssets';
 
 const Footer: React.FC = () => {
   return (
@@ -8,12 +8,16 @@ const Footer: React.FC = () => {
       <div className="max-w-[1120px] mx-auto px-6">
         <div className="grid md:grid-cols-3 gap-16">
           <div className="space-y-6 text-left">
-            <div className="flex items-center gap-3">
-              <svg className="w-6 h-6" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-                <path clipRule="evenodd" d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z" fill="white" fillRule="evenodd"></path>
-              </svg>
-              <h2 className="text-xl font-bold font-fraunces">Cláudia Cruz</h2>
-            </div>
+            <Link to="/" className="inline-flex rounded-lg bg-white p-2.5 shadow-sm transition-opacity hover:opacity-95">
+              <img
+                src={brand.horizontal}
+                alt="Cláudia Cruz Terapeuta"
+                className="h-8 w-auto max-w-[200px] object-contain md:h-9 md:max-w-[220px]"
+                width={220}
+                height={36}
+                decoding="async"
+              />
+            </Link>
             <p className="text-white/70 text-sm">
               Terapeuta com estudos em Psicanálise, Especialista em Terapia Cognitivo Comportamental e Saúde Mental Organizacional.
             </p>
@@ -73,12 +77,22 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/40">
+        <div className="mt-16 pt-8 border-t border-white/10 flex flex-col gap-6">
+          <div className="flex justify-center md:justify-start">
+            <img
+              src={brand.caracteres}
+              alt=""
+              className="h-5 w-auto max-w-full opacity-70 md:h-6"
+              aria-hidden
+            />
+          </div>
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/40">
           <p>© 2024 Cláudia Cruz Terapeuta. Todos os direitos reservados.</p>
           <div className="flex gap-6">
             <Link to="/termos" className="hover:text-white">Privacidade</Link>
             <Link to="/termos" className="hover:text-white">Cookies</Link>
             <Link to="/termos" className="hover:text-white">Termos</Link>
+          </div>
           </div>
         </div>
       </div>
