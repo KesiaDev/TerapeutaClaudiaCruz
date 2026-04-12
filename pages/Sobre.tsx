@@ -6,25 +6,25 @@ import claudiaSobre from '../src/assets/claudia-sobre.png';
 const Sobre: React.FC = () => {
   return (
     <div className="bg-[#f7f4ee] overflow-x-hidden">
-      {/* Banner full-bleed: altura = proporção real da foto (w-full h-auto) = 100% da imagem visível, sem zoom/corte */}
+      {/* Banner panorâmico full-bleed (corte tipo print): faixa baixa + object-cover + foco parede/texto à esq. e retrato à dir. */}
       <section
         className="relative w-screen max-w-[100vw] -translate-x-1/2 left-1/2 overflow-hidden bg-[#e8ebe7]"
         aria-label="Sobre Mim"
       >
-        <div className="relative w-full leading-none">
+        <div className="relative h-[clamp(280px,24vw,500px)] min-h-[280px] w-full sm:h-[clamp(300px,22vw,520px)] md:min-h-[300px]">
           <img
             src={claudiaSobre}
-            alt="Cláudia Cruz, terapeuta, em seu consultório"
-            className="block h-auto w-full max-w-none"
+            alt=""
+            className="pointer-events-none absolute inset-0 h-full w-full object-cover object-[30%_32%] sm:object-[28%_30%] md:object-[26%_28%] lg:object-[24%_26%]"
             loading="eager"
             decoding="async"
           />
           <div
-            className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#f7f4ee]/95 via-[#f7f4ee]/55 to-transparent sm:via-[#f7f4ee]/40 md:via-[#f7f4ee]/30 md:to-transparent"
+            className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#f7f4ee]/95 via-[#f7f4ee]/55 to-transparent sm:via-[#f7f4ee]/40 md:via-[#f7f4ee]/28 md:to-transparent"
             aria-hidden
           />
           <div className="absolute inset-0 z-10 flex items-center">
-            <div className="mx-auto flex w-full max-w-[1200px] px-5 py-8 sm:px-8 sm:py-10 md:px-10 md:py-12 lg:px-12">
+            <div className="mx-auto flex w-full max-w-[1200px] px-5 py-6 sm:px-8 sm:py-8 md:px-10 md:py-10 lg:px-12">
               <div className="max-w-lg md:max-w-xl lg:max-w-[26rem] text-left drop-shadow-[0_1px_1px_rgba(247,244,238,0.8)]">
                 <span className="inline-block text-[#c46a3a] text-sm font-bold uppercase tracking-widest mb-4">Sobre Mim</span>
                 <h1 className="text-[#2d5a57] text-3xl font-bold leading-tight mb-5 font-fraunces sm:text-4xl lg:text-[2.5rem]">
