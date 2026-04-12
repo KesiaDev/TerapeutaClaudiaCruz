@@ -6,11 +6,11 @@ import claudiaSobre from '../src/assets/claudia-sobre.png';
 const Sobre: React.FC = () => {
   return (
     <div className="bg-[#f7f4ee]">
-      {/* Hero com texto e foto lado a lado */}
-      <section className="relative w-full py-16 md:py-24">
-        <div className="max-w-[1200px] mx-auto px-6 w-full">
-          <div className="grid md:grid-cols-2 gap-10 lg:gap-14 items-start">
-            <div className="order-2 md:order-1 bg-white/90 backdrop-blur-xl p-8 md:p-10 rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.08)] border border-white/80 flex flex-col items-start text-left md:max-w-xl md:justify-self-end w-full">
+      {/* Hero: texto compacto + foto em destaque tipo banner */}
+      <section className="relative w-full py-12 md:py-16 lg:py-20 overflow-x-hidden">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-10 w-full">
+          <div className="flex flex-col lg:flex-row lg:items-center gap-10 lg:gap-12 xl:gap-16">
+            <div className="order-2 lg:order-1 w-full lg:max-w-md xl:max-w-[28rem] shrink-0 bg-white/90 backdrop-blur-xl p-8 md:p-10 rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.08)] border border-white/80 flex flex-col items-start text-left lg:py-12">
               <span className="inline-block text-[#c46a3a] text-sm font-bold uppercase tracking-widest mb-4">Sobre Mim</span>
               <h1 className="text-[#2d5a57] text-3xl lg:text-4xl xl:text-[2.5rem] font-bold leading-tight mb-5 font-fraunces">
                 Escuta experiente e humanidade no centro do seu processo.
@@ -22,12 +22,12 @@ const Sobre: React.FC = () => {
                 Minha Trajetória
               </Link>
             </div>
-            <div className="order-1 md:order-2 w-full flex justify-center md:justify-end md:pl-2">
-              <div className="w-full max-w-[min(100%,420px)] lg:max-w-[480px] rounded-2xl bg-[#eef3f1] p-3 sm:p-4 shadow-xl">
+            <div className="order-1 lg:order-2 flex-1 min-w-0 w-full">
+              <div className="relative w-full rounded-2xl lg:rounded-3xl shadow-2xl bg-gradient-to-br from-[#e8ece9] to-[#dde5e2] min-h-[min(58vh,640px)] md:min-h-[min(72vh,800px)] lg:min-h-[min(82vh,920px)] flex items-center justify-center p-3 sm:p-5 lg:p-6">
                 <img
                   src={claudiaSobre}
                   alt="Cláudia Cruz - Terapeuta"
-                  className="w-full h-auto max-h-[min(92vh,720px)] object-contain object-center rounded-xl"
+                  className="w-full h-full max-h-[min(56vh,620px)] md:max-h-[min(70vh,780px)] lg:max-h-[min(80vh,900px)] object-contain object-center"
                   loading="eager"
                   decoding="async"
                 />
