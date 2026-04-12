@@ -6,41 +6,41 @@ import claudiaSobre from '../src/assets/claudia-sobre.png';
 const Sobre: React.FC = () => {
   return (
     <div className="bg-[#f7f4ee] overflow-x-hidden">
-      {/* Banner full-bleed: foto de fundo (parede à esquerda) + texto sobre o espaço vazio */}
+      {/* Banner full-bleed: altura = proporção real da foto (w-full h-auto) = 100% da imagem visível, sem zoom/corte */}
       <section
-        className="relative flex min-h-[min(62vh,560px)] sm:min-h-[min(64vh,580px)] md:min-h-[min(66vh,620px)] lg:min-h-[min(68vh,660px)] w-screen max-w-[100vw] -translate-x-1/2 left-1/2 items-center"
+        className="relative w-screen max-w-[100vw] -translate-x-1/2 left-1/2 overflow-hidden bg-[#e8ebe7]"
         aria-label="Sobre Mim"
       >
-        <div className="pointer-events-none absolute inset-0 bg-[#e8ebe7]">
-          {/* object-contain = foto inteira sem crop; object-right = encosta à direita; faixas à esq. com fundo */}
+        <div className="relative w-full leading-none">
           <img
             src={claudiaSobre}
-            alt=""
-            className="h-full w-full object-contain object-right"
+            alt="Cláudia Cruz, terapeuta, em seu consultório"
+            className="block h-auto w-full max-w-none"
             loading="eager"
             decoding="async"
           />
-          {/* Leitura sobre a parede: vê-se o fundo mas o texto ganha contraste */}
           <div
-            className="absolute inset-0 bg-gradient-to-r from-[#f7f4ee]/95 via-[#f7f4ee]/55 to-transparent sm:via-[#f7f4ee]/40 md:via-[#f7f4ee]/30 md:to-transparent"
+            className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#f7f4ee]/95 via-[#f7f4ee]/55 to-transparent sm:via-[#f7f4ee]/40 md:via-[#f7f4ee]/30 md:to-transparent"
             aria-hidden
           />
-        </div>
-        <div className="relative z-10 mx-auto flex w-full max-w-[1200px] items-center px-5 py-10 sm:px-8 sm:py-12 md:px-10 md:py-14 lg:px-12">
-          <div className="max-w-lg md:max-w-xl lg:max-w-[26rem] text-left drop-shadow-[0_1px_1px_rgba(247,244,238,0.8)]">
-            <span className="inline-block text-[#c46a3a] text-sm font-bold uppercase tracking-widest mb-4">Sobre Mim</span>
-            <h1 className="text-[#2d5a57] text-3xl font-bold leading-tight mb-5 font-fraunces sm:text-4xl lg:text-[2.5rem]">
-              Escuta experiente e humanidade no centro do seu processo.
-            </h1>
-            <p className="text-[#3d4f4d] text-base leading-relaxed md:text-lg mb-8">
-              Olá, sou Cláudia Cruz. Minha trajetória é pautada pelo acolhimento técnico e sensível, onde cada paciente encontra o suporte necessário para navegar suas emoções e construir uma vida mais equilibrada.
-            </p>
-            <Link
-              to="/contato"
-              className="inline-flex items-center justify-center rounded-lg h-12 px-8 md:px-10 bg-[#c46a3a] text-white text-sm md:text-base font-bold shadow-md transition-all hover:brightness-110"
-            >
-              Minha Trajetória
-            </Link>
+          <div className="absolute inset-0 z-10 flex items-center">
+            <div className="mx-auto flex w-full max-w-[1200px] px-5 py-8 sm:px-8 sm:py-10 md:px-10 md:py-12 lg:px-12">
+              <div className="max-w-lg md:max-w-xl lg:max-w-[26rem] text-left drop-shadow-[0_1px_1px_rgba(247,244,238,0.8)]">
+                <span className="inline-block text-[#c46a3a] text-sm font-bold uppercase tracking-widest mb-4">Sobre Mim</span>
+                <h1 className="text-[#2d5a57] text-3xl font-bold leading-tight mb-5 font-fraunces sm:text-4xl lg:text-[2.5rem]">
+                  Escuta experiente e humanidade no centro do seu processo.
+                </h1>
+                <p className="text-[#3d4f4d] text-base leading-relaxed md:text-lg mb-8">
+                  Olá, sou Cláudia Cruz. Minha trajetória é pautada pelo acolhimento técnico e sensível, onde cada paciente encontra o suporte necessário para navegar suas emoções e construir uma vida mais equilibrada.
+                </p>
+                <Link
+                  to="/contato"
+                  className="inline-flex items-center justify-center rounded-lg h-12 px-8 md:px-10 bg-[#c46a3a] text-white text-sm md:text-base font-bold shadow-md transition-all hover:brightness-110"
+                >
+                  Minha Trajetória
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
