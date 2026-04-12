@@ -99,16 +99,12 @@ const Contact: React.FC = () => {
                   <span className="material-symbols-outlined">location_on</span>
                   <h3 className="text-lg font-bold font-fraunces">Atendimento Presencial</h3>
                 </div>
-                <div className="mt-4 space-y-4">
+                <div className="mt-4">
                   <div className="bg-white p-4 rounded-lg border border-slate-200">
-                    <p className="font-bold text-slate-900">Unidade Centro</p>
-                    <p className="text-sm text-slate-600">Av. Rio Branco, 156 - Sala 1204</p>
-                    <p className="text-sm text-slate-600">Rio de Janeiro, RJ</p>
-                  </div>
-                  <div className="bg-white p-4 rounded-lg border border-slate-200">
-                    <p className="font-bold text-slate-900">Unidade Barra</p>
-                    <p className="text-sm text-slate-600">Av. das Américas, 4200 - Bloco 9</p>
-                    <p className="text-sm text-slate-600">Rio de Janeiro, RJ</p>
+                    <p className="font-bold text-slate-900">Consultório</p>
+                    <p className="text-sm text-slate-600 mt-1">
+                      Avenida Coronel Marcos de Andrade, nº 218 - Sala 11
+                    </p>
                   </div>
                 </div>
               </div>
@@ -122,10 +118,14 @@ const Contact: React.FC = () => {
                 </p>
               </div>
             </div>
-            {/* Map Placeholder */}
-            <div className="rounded-xl overflow-hidden h-48 border border-slate-200 relative grayscale opacity-80">
-               <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnv5imfnuCpTgl40Ww9_OuHoMgN-9m7WDCvx0IWaeLU7PBjoqqayRZUa6F_-JEIuWV-UQxt27kCvU11kzXvwUNFLx7oNZl-383lrjvawsn4OTM89i_40jBx2KPlk0_Ukz43faM4LEVAY85pl3BeVSNvURh14AxXCoQhbEdA3PzuLJips8EHu4_F7oIWHle8jrZ3r36IxTGYPZ8rWze1UDAeOfi8cMvhV_0SwO2K6571mHGuAMkO7-vY2tv_hH--sP43PtEFIB2BoVc" className="w-full h-full object-cover" alt="Mapa" />
-               <div className="absolute inset-0 bg-[#1f4c4a]/10 pointer-events-none"></div>
+            <div className="rounded-xl overflow-hidden h-48 border border-slate-200 bg-slate-100">
+              <iframe
+                title="Mapa do consultório"
+                src="https://www.google.com/maps?q=Avenida+Coronel+Marcos+de+Andrade+218+Sala+11&output=embed"
+                className="h-full w-full border-0"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
           </div>
         </div>
