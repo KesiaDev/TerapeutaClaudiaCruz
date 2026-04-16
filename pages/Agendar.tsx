@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const API = 'https://psipro-backend-production.up.railway.app/public/booking';
+const API = 'https://psipro-backend-production.up.railway.app/api/public/booking';
 
 const MONTHS = ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
 const DAYS_SHORT = ['Dom','Seg','Ter','Qua','Qui','Sex','Sáb'];
