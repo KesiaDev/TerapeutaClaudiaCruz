@@ -21,7 +21,7 @@ export default function Agendar() {
 
   const [form, setForm] = useState({ name: '', email: '', phone: '', notes: '' });
   const [submitting, setSubmitting] = useState(false);
-  const [confirmed, setConfirmed] = useState<{ scheduledAt: string; patientName: string } | null>(null);
+  const [confirmed, setConfirmed] = useState<{ scheduledAt: string; patientName: string; intakeLink?: string | null } | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   // Busca dias disponíveis ao mudar mês
@@ -73,7 +73,7 @@ export default function Agendar() {
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.message || 'Erro ao agendar.');
-      setConfirmed({ scheduledAt: data.scheduledAt, patientName: data.patientName });
+      setConfirmed({ scheduledAt: data.scheduledAt, patientName: data.patientName, intakeLink: data.intakeLink ?? null });
     } catch (err: any) {
       setError(err.message || 'Erro ao agendar. Tente novamente.');
     } finally {
@@ -115,7 +115,24 @@ export default function Agendar() {
             <p className="font-bold text-[#1f4c4a] text-lg capitalize">{dateStr}</p>
             <p className="text-[#c46a3a] font-bold text-xl">às {timeStr}</p>
           </div>
-          <p className="text-sm text-slate-500 mb-8">Você receberá um lembrete. Em caso de dúvidas, entre em contato via WhatsApp.</p>
+          {confirmed.intakeLink ? (
+            <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-6 text-left">
+              <p className="text-sm font-bold text-amber-800 mb-1">📋 Formulário de anamnese</p>
+              <p className="text-sm text-amber-700 mb-3">
+                Para otimizar nossa consulta, preencha o formulário de anamnese antes do atendimento. Você também receberá o link pelo WhatsApp e e-mail.
+              </p>
+              <a
+                href={confirmed.intakeLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-amber-600 text-white px-5 py-2 rounded-lg text-sm font-bold hover:bg-amber-700 transition-all"
+              >
+                Preencher formulário agora
+              </a>
+            </div>
+          ) : (
+            <p className="text-sm text-slate-500 mb-6">Você receberá um lembrete antes da consulta. Em caso de dúvidas, entre em contato via WhatsApp.</p>
+          )}
           <a href="/" className="inline-block bg-[#1f4c4a] text-white px-8 py-3 rounded-lg font-bold hover:bg-[#1f4c4a]/90 transition-all">
             Voltar ao início
           </a>
