@@ -20,6 +20,7 @@ export default function Agendar() {
   const [selectedSlot, setSelectedSlot] = useState<string | null>(null);
 
   const [form, setForm] = useState({ name: '', email: '', phone: '', notes: '' });
+  const [isNewPatient, setIsNewPatient] = useState<boolean | null>(null);
   const [submitting, setSubmitting] = useState(false);
   const [confirmed, setConfirmed] = useState<{ scheduledAt: string; patientName: string; intakeLink?: string | null } | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -57,6 +58,7 @@ export default function Agendar() {
     if (!selectedSlot) { setError('Selecione um horário.'); return; }
     if (!form.name.trim()) { setError('Informe seu nome.'); return; }
     if (!form.phone.trim() && !form.email.trim()) { setError('Informe telefone ou e-mail.'); return; }
+    if (isNewPatient === null) { setError('Informe se você é paciente novo ou não.'); return; }
     setError(null);
     setSubmitting(true);
     try {
@@ -69,6 +71,7 @@ export default function Agendar() {
           patientPhone: form.phone.trim() || undefined,
           isoDateTime: selectedSlot,
           notes: form.notes.trim() || undefined,
+          isNewPatient: isNewPatient === true,
         }),
       });
       const data = await res.json();
@@ -271,6 +274,40 @@ export default function Agendar() {
             <div className="bg-white rounded-2xl shadow-sm p-6">
               <h2 className="text-lg font-bold text-[#1f4c4a] mb-4">Seus dados</h2>
               <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+                {/* Paciente novo? */}
+                <div>
+                  <label className="text-sm font-semibold text-slate-600 block mb-2">Você é paciente novo(a)? *</label>
+                  <div className="grid grid-cols-2 gap-3">
+                    <button
+                      type="button"
+                      onClick={() => setIsNewPatient(true)}
+                      className={`py-3 px-4 rounded-lg text-sm font-bold border-2 transition-all flex items-center justify-center gap-2
+                        ${isNewPatient === true
+                          ? 'bg-[#1f4c4a] border-[#1f4c4a] text-white shadow-md'
+                          : 'border-slate-200 text-slate-600 hover:border-[#1f4c4a] hover:text-[#1f4c4a]'
+                        }`}
+                    >
+                      🌱 Sim, sou novo(a)
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setIsNewPatient(false)}
+                      className={`py-3 px-4 rounded-lg text-sm font-bold border-2 transition-all flex items-center justify-center gap-2
+                        ${isNewPatient === false
+                          ? 'bg-[#1f4c4a] border-[#1f4c4a] text-white shadow-md'
+                          : 'border-slate-200 text-slate-600 hover:border-[#1f4c4a] hover:text-[#1f4c4a]'
+                        }`}
+                    >
+                      👋 Já sou paciente
+                    </button>
+                  </div>
+                  {isNewPatient === true && (
+                    <p className="text-xs text-[#1f4c4a] mt-2 bg-[#f0f7f6] rounded-lg px-3 py-2">
+                      📋 Você receberá um formulário de anamnese pelo WhatsApp para preencher antes da consulta.
+                    </p>
+                  )}
+                </div>
+
                 <div>
                   <label className="text-sm font-semibold text-slate-600 block mb-1">Nome completo *</label>
                   <input
