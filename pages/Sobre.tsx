@@ -28,16 +28,16 @@ const Sobre: React.FC = () => {
               <div className="max-w-lg md:max-w-xl lg:max-w-[26rem] text-left drop-shadow-[0_1px_1px_rgba(247,244,238,0.8)]">
                 <span className="inline-block text-[#c46a3a] text-sm font-bold uppercase tracking-widest mb-4">Sobre Mim</span>
                 <h1 className="text-[#2d5a57] text-3xl font-bold leading-tight mb-5 font-fraunces sm:text-4xl lg:text-[2.5rem]">
-                  Escuta experiente e humanidade no centro do seu processo.
+                  Aqui, sua história é levada a sério.
                 </h1>
                 <p className="text-[#3d4f4d] text-base leading-relaxed md:text-lg mb-8">
-                  Olá, sou Cláudia Cruz. Minha trajetória é pautada pelo acolhimento técnico e sensível, onde cada paciente encontra o suporte necessário para navegar suas emoções e construir uma vida mais equilibrada.
+                  Sou Cláudia Cruz. Com formação em TCC, TRG e Psicanálise, ofereço um espaço seguro para entender seus padrões, fortalecer suas relações e construir a vida que você quer viver.
                 </p>
                 <Link
                   to="/contato"
                   className="inline-flex items-center justify-center rounded-lg h-12 px-8 md:px-10 bg-[#c46a3a] text-white text-sm md:text-base font-bold shadow-md transition-all hover:brightness-110"
                 >
-                  Minha Trajetória
+                  Conheça minha trajetória
                 </Link>
               </div>
             </div>
