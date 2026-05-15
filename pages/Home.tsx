@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import abordagemSessao from '../src/assets/DSC02175.jpg';
+import claudiaHero from '../src/assets/DSC02183.jpg';
 
 const Home: React.FC = () => {
   return (
@@ -35,12 +36,13 @@ const Home: React.FC = () => {
               </div>
             </div>
             <div className="relative">
-              <div
-                className="aspect-[4/5] bg-cover bg-center rounded-lg shadow-xl"
-                style={{ backgroundImage: `url("${import.meta.env.BASE_URL}hero-claudia-cruz.png")` }}
-                role="img"
-                aria-label="Cláudia Cruz, terapeuta"
-              />
+              <div className="aspect-[4/5] rounded-lg shadow-xl overflow-hidden">
+                <img
+                  src={claudiaHero}
+                  alt="Cláudia Cruz, terapeuta"
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
             </div>
           </div>
         </div>

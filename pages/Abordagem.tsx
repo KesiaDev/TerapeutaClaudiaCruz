@@ -11,9 +11,9 @@ const Abordagem: React.FC = () => {
       <section className="w-full max-w-[1200px] mx-auto px-6 py-16 md:py-24">
         <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16">
           <div className="w-full md:w-1/2">
-            <div className="aspect-[4/3] w-full bg-slate-200 rounded-2xl overflow-hidden shadow-2xl relative group">
+            <div className="aspect-[3/4] w-full bg-slate-200 rounded-2xl overflow-hidden shadow-2xl relative group">
               <div className="absolute inset-0 bg-[#c46a3a]/5 group-hover:bg-transparent transition-colors"></div>
-              <img src={claudiaHero} alt="Cláudia Cruz" className="w-full h-full object-cover" />
+              <img src={claudiaHero} alt="Cláudia Cruz" className="w-full h-full object-cover object-top" />
             </div>
           </div>
           <div className="w-full md:w-1/2 flex flex-col gap-6 text-left">

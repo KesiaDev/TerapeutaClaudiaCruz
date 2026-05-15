@@ -11,7 +11,7 @@ const Sobre: React.FC = () => {
         className="relative w-screen max-w-[100vw] -translate-x-1/2 left-1/2 overflow-hidden bg-[#e8ebe7]"
         aria-label="Sobre Mim"
       >
-        <div className="relative min-h-[480px] h-[clamp(480px,min(62vh,900px),920px)] w-full sm:min-h-[520px]">
+        <div className="relative min-h-[600px] h-[clamp(600px,min(85vh,1000px),1000px)] w-full sm:min-h-[700px]">
           <img
             src={claudiaSobre}
             alt=""
