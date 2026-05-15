@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import claudiaSobre from '../src/assets/DSC02183.jpg';
+import claudiaSobre from '../src/assets/DSC02190.jpg';
 
 const Sobre: React.FC = () => {
   return (
@@ -15,7 +15,7 @@ const Sobre: React.FC = () => {
           <img
             src={claudiaSobre}
             alt=""
-            className="pointer-events-none absolute inset-0 h-full w-full object-cover object-[24%_22%] sm:object-[23%_20%] md:object-[22%_19%] lg:object-[21%_18%]"
+            className="pointer-events-none absolute inset-0 h-full w-full object-cover object-[60%_30%] sm:object-[58%_28%] md:object-[55%_25%] lg:object-[52%_22%]"
             loading="eager"
             decoding="async"
           />
