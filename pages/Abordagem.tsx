@@ -1,6 +1,9 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import claudiaHero from '../src/assets/DSC02220.jpg';
+import claudiaTcc from '../src/assets/DSC02187.jpg';
+import claudiaCoach from '../src/assets/DSC02190.jpg';
 
 const Abordagem: React.FC = () => {
   return (
@@ -10,7 +13,7 @@ const Abordagem: React.FC = () => {
           <div className="w-full md:w-1/2">
             <div className="aspect-[4/3] w-full bg-slate-200 rounded-2xl overflow-hidden shadow-2xl relative group">
               <div className="absolute inset-0 bg-[#c46a3a]/5 group-hover:bg-transparent transition-colors"></div>
-              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCInrTIcUc8WOMPkhTTjpTG9X8Od0pxMWhhCBcynw5e5kQ-c_yvU12ayGtV5yMRvfzlxbexs97b3lHrHkI310xjaJSnUKRbQvgmPWrrixGCM2141j-XKyFul9ZzOEVeyN9U5G5xk4w3UlNX0c-LcrzywCOZzmPnuRAK9w6mwa1g96CRbkclsa4e0fYZOzkp78snMt4fWyhBg0u9h9lLq7MOYyYg1lHrt9fXDS5bjyT4HvwkvVepTZVcsDrZ21ucweZVskvwfz4Gz7Xh" alt="Cláudia Cruz" className="w-full h-full object-cover" />
+              <img src={claudiaHero} alt="Cláudia Cruz" className="w-full h-full object-cover" />
             </div>
           </div>
           <div className="w-full md:w-1/2 flex flex-col gap-6 text-left">
@@ -48,7 +51,7 @@ const Abordagem: React.FC = () => {
               title: 'TCC na prática', 
               icon: 'psychology', 
               desc: 'Foco em padrões de pensamento e comportamento para soluções práticas no presente.',
-              img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBNiidmK7ZFUwiD90Hqg3tErUQCyc8-7GikmvcTir479paffr45ADGDT7szRxc_yZ4SfG30LV9iszmu8d2hXZDV8gZmbXqPtkmEHizfyA2tGifRtocDoDu28RAr9H-8wJQQbkqg4flPJdVmaKEvamaoyZALIOa_ShdNKTjhYxB_LDCfqOfb_cp-zmLHQs8JnrPsVLUwvzkF-3A_y6e_8FZ4H5-sHbHmgmR6V6fEZAQOkMaNQizJdxPPR4c3Ljt_mF9BhSLdO7oCN2dz'
+              img: claudiaTcc
             },
             { 
               title: 'TRG', 
@@ -72,7 +75,7 @@ const Abordagem: React.FC = () => {
               title: 'Coach de Carreira', 
               icon: 'trending_up', 
               desc: 'Orientação profissional estratégica e definição de metas para uma vida profissional realizada.',
-              img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD1rCCs1eEOfdnKm8NqnuDhlSrpHUzGrIAuybtDuX9MkdSuEGXbnKbSBiJKbN_pEu36xLtpZNlqrG5t58pQoxY_4aV8hrwNL3hQSMjy9WLBHVdv-eHZKs-fvdCAzX6ZC6GvarTcj-rwqsHvwTt57FvGlAQ1I1Cu3xcqtX98ItzdHzy8l6j8vEOqIw4ZnBV-ouMbpqzg3ldcwh03kIBfyxsoRM8NrvyE6bO_3Uua98labfMpsCrdSV9wzS9jaqJcU2xw3DwFZ2PVbbvk'
+              img: claudiaCoach
             },
             {
               title: 'Pronto para começar?',

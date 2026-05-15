@@ -1,32 +1,34 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import claudiaSobre from '../src/assets/claudia-sobre.png';
+import claudiaSobre from '../src/assets/DSC02199.jpg';
 
 const Sobre: React.FC = () => {
   return (
     <div className="bg-[#f7f4ee]">
       {/* Hero com texto e foto lado a lado */}
-      <section className="relative w-full min-h-[600px] overflow-hidden flex items-center py-16 md:py-24">
+      <section className="relative w-full py-16 md:py-24">
         <div className="max-w-[1200px] mx-auto px-6 w-full">
-          <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <div className="order-2 md:order-1 bg-white/90 backdrop-blur-xl p-8 md:p-12 rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.08)] border border-white/80 flex flex-col items-start text-left">
-              <span className="inline-block text-[#c46a3a] text-sm font-bold uppercase tracking-widest mb-4">Sobre Mim</span>
-              <h1 className="text-[#2d5a57] text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight mb-6 font-fraunces">
-                Escuta experiente e humanidade no centro do seu processo.
-              </h1>
-              <p className="text-gray-600 text-lg leading-relaxed mb-8 max-w-[540px]">
-                Olá, sou Cláudia Cruz. Minha trajetória é pautada pelo acolhimento técnico e sensível, onde cada paciente encontra o suporte necessário para navegar suas emoções e construir uma vida mais equilibrada.
-              </p>
-              <Link to="/contato" className="flex items-center justify-center rounded h-12 px-10 bg-[#c46a3a] text-white font-bold hover:brightness-110 transition-all shadow-md">
-                Minha Trajetória
-              </Link>
+          <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-stretch">
+            <div className="order-2 md:order-1 flex flex-col justify-center">
+              <div className="bg-white/90 backdrop-blur-xl p-8 md:p-12 rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.08)] border border-white/80">
+                <span className="inline-block text-[#c46a3a] text-sm font-bold uppercase tracking-widest mb-4">Sobre Mim</span>
+                <h1 className="text-[#2d5a57] text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight mb-6 font-fraunces">
+                  Escuta experiente e humanidade no centro do seu processo.
+                </h1>
+                <p className="text-gray-600 text-base lg:text-lg leading-relaxed mb-8">
+                  Olá, sou Cláudia Cruz. Minha trajetória é pautada pelo acolhimento técnico e sensível, onde cada paciente encontra o suporte necessário para navegar suas emoções e construir uma vida mais equilibrada.
+                </p>
+                <Link to="/contato" className="inline-flex items-center justify-center rounded h-12 px-10 bg-[#c46a3a] text-white font-bold hover:brightness-110 transition-all shadow-md">
+                  Minha Trajetória
+                </Link>
+              </div>
             </div>
-            <div className="order-1 md:order-2">
+            <div className="order-1 md:order-2 flex items-center justify-center">
               <img 
                 src={claudiaSobre} 
                 alt="Cláudia Cruz - Terapeuta" 
-                className="w-full aspect-[4/5] object-cover rounded-2xl shadow-xl"
+                className="w-full max-w-[500px] mx-auto object-contain rounded-2xl shadow-xl"
               />
             </div>
           </div>

@@ -1,7 +1,8 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import abordagemSessao from '../src/assets/abordagem-sessao.png';
+import abordagemSessao from '../src/assets/DSC02175.jpg';
+import claudiaInicio from '../src/assets/DSC02183.jpg';
 
 const Home: React.FC = () => {
   return (
@@ -35,10 +36,11 @@ const Home: React.FC = () => {
               </div>
             </div>
             <div className="relative">
-              <div 
-                className="aspect-[4/5] bg-cover bg-center rounded-lg shadow-xl" 
-                style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuDXIL09v0sWWsRX4uwxPkgkSW8nj1Y-ELsKjis6f50kzZo9zNXmcOdSbuvYtr-SNXJVx1PcEEIyV6G6PrpPcBD0nWb-UFIwCPd1dpi5v9m3nMyg75-fnxphKt4s0IoZX80lJWNp8TACBZ5pmnrLx-DVuzzxORoG1exwtfs_Ngd7lKXf7gwUGMeya9w3nIk52NMSrQphXxlKIhy2zBm0Pxr3CNx7SKGuLwF94l7JslLd1Ase4wGU1l4rCjQTvyeIL-SdQYdda_Q7zjy5")' }}
-              ></div>
+              <img 
+                src={claudiaInicio} 
+                alt="Cláudia Cruz - Terapeuta" 
+                className="w-full aspect-[4/5] object-cover rounded-lg shadow-xl"
+              />
             </div>
           </div>
         </div>
