@@ -5,31 +5,41 @@ import claudiaSobre from '../src/assets/DSC02199.jpg';
 
 const Sobre: React.FC = () => {
   return (
-    <div className="bg-[#f7f4ee]">
-      {/* Hero com texto e foto lado a lado */}
-      <section className="relative w-full py-16 md:py-24">
-        <div className="max-w-[1200px] mx-auto px-6 w-full">
-          <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-stretch">
-            <div className="order-2 md:order-1 flex flex-col justify-center">
-              <div className="bg-white/90 backdrop-blur-xl p-8 md:p-12 rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.08)] border border-white/80">
+    <div className="bg-[#f7f4ee] overflow-x-hidden">
+      {/* Banner alto: mais área vertical para cabeça + mãos; object-position prioriza topo do cabelo e corpo inteiro */}
+      <section
+        className="relative w-screen max-w-[100vw] -translate-x-1/2 left-1/2 overflow-hidden bg-[#e8ebe7]"
+        aria-label="Sobre Mim"
+      >
+        <div className="relative min-h-[480px] h-[clamp(480px,min(62vh,900px),920px)] w-full sm:min-h-[520px]">
+          <img
+            src={claudiaSobre}
+            alt=""
+            className="pointer-events-none absolute inset-0 h-full w-full object-cover object-[24%_22%] sm:object-[23%_20%] md:object-[22%_19%] lg:object-[21%_18%]"
+            loading="eager"
+            decoding="async"
+          />
+          <div
+            className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#f7f4ee]/95 via-[#f7f4ee]/55 to-transparent sm:via-[#f7f4ee]/40 md:via-[#f7f4ee]/28 md:to-transparent"
+            aria-hidden
+          />
+          <div className="absolute inset-0 z-10 flex items-center">
+            <div className="mx-auto flex w-full max-w-[1200px] px-5 py-6 sm:px-8 sm:py-8 md:px-10 md:py-10 lg:px-12">
+              <div className="max-w-lg md:max-w-xl lg:max-w-[26rem] text-left drop-shadow-[0_1px_1px_rgba(247,244,238,0.8)]">
                 <span className="inline-block text-[#c46a3a] text-sm font-bold uppercase tracking-widest mb-4">Sobre Mim</span>
-                <h1 className="text-[#2d5a57] text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight mb-6 font-fraunces">
+                <h1 className="text-[#2d5a57] text-3xl font-bold leading-tight mb-5 font-fraunces sm:text-4xl lg:text-[2.5rem]">
                   Escuta experiente e humanidade no centro do seu processo.
                 </h1>
-                <p className="text-gray-600 text-base lg:text-lg leading-relaxed mb-8">
+                <p className="text-[#3d4f4d] text-base leading-relaxed md:text-lg mb-8">
                   Olá, sou Cláudia Cruz. Minha trajetória é pautada pelo acolhimento técnico e sensível, onde cada paciente encontra o suporte necessário para navegar suas emoções e construir uma vida mais equilibrada.
                 </p>
-                <Link to="/contato" className="inline-flex items-center justify-center rounded h-12 px-10 bg-[#c46a3a] text-white font-bold hover:brightness-110 transition-all shadow-md">
+                <Link
+                  to="/contato"
+                  className="inline-flex items-center justify-center rounded-lg h-12 px-8 md:px-10 bg-[#c46a3a] text-white text-sm md:text-base font-bold shadow-md transition-all hover:brightness-110"
+                >
                   Minha Trajetória
                 </Link>
               </div>
-            </div>
-            <div className="order-1 md:order-2 flex items-center justify-center">
-              <img 
-                src={claudiaSobre} 
-                alt="Cláudia Cruz - Terapeuta" 
-                className="w-full max-w-[500px] mx-auto object-contain rounded-2xl shadow-xl"
-              />
             </div>
           </div>
         </div>
@@ -106,16 +116,18 @@ const Sobre: React.FC = () => {
                 ))}
               </div>
             </div>
-            {/* Map Placeholder */}
-            <div className="flex-1 h-[450px] rounded border-4 border-white shadow-lg overflow-hidden grayscale contrast-125 opacity-70">
-              <div className="w-full h-full bg-[#d8dcd1] flex items-center justify-center relative">
-                <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(#2d5a57 1px, transparent 1px)", backgroundSize: "16px 16px" }}></div>
-                <div className="text-center z-10 p-10 bg-white/80 backdrop-blur-sm rounded">
-                  <span className="material-symbols-outlined !text-5xl text-[#2d5a57] mb-4">map</span>
-                  <p className="text-sm font-semibold text-[#2d5a57] uppercase tracking-widest">Mapa de Atendimento</p>
-                  <p className="text-xs text-gray-600 mt-2">Presença e Conectividade</p>
-                </div>
-              </div>
+            {/* Google Maps - Aba Neuro Clinic */}
+            <div className="flex-1 h-[450px] rounded-xl border border-white shadow-lg overflow-hidden bg-[#d8dcd1]">
+              <iframe
+                title="Mapa de Atendimento - Aba Neuro Clinic"
+                src="https://www.google.com/maps?q=Rua+Cirurgi%C3%A3o+Vaz+Ferreira,+591,+Bairro+Centro,+Viam%C3%A3o+-+RS&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
           </div>
         </div>
@@ -131,9 +143,9 @@ const Sobre: React.FC = () => {
             Agende uma primeira conversa e descubra como um processo estruturado pode te ajudar a retomar clareza, autonomia e relações mais saudáveis.
           </p>
           <div className="flex flex-wrap justify-start gap-6">
-            <Link to="/contato" className="flex items-center justify-center rounded h-14 px-10 bg-[#c46a3a] text-white font-bold hover:brightness-110 transition-all shadow-lg">
-              Agendar via WhatsApp
-            </Link>
+            <a href="/#/agendar" className="flex items-center justify-center rounded h-14 px-10 bg-[#c46a3a] text-white font-bold hover:brightness-110 transition-all shadow-lg">
+              Agendar Consulta
+            </a>
             <Link to="/como-funciona" className="flex items-center justify-center rounded h-14 px-10 border-2 border-[#c46a3a] text-[#c46a3a] font-bold hover:bg-[#c46a3a] hover:text-white transition-all">
               Ver horários
             </Link>

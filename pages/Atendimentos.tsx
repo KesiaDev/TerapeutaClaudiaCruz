@@ -24,17 +24,20 @@ const Atendimentos: React.FC = () => {
             { 
               title: 'Terapia Familiar', 
               desc: 'Reconstruindo laços e melhorando a comunicação através de um processo de diálogo mediado e acolhimento estruturado.',
-              img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCSTsd1X1rq3jMCrGEdsC6jETZEZSuyan7hAsrRQ7Zi0s_BEZ-mtvflLFlLp6HfzjoRyLTvon0FlW6255rEs9LwTMLnqZGSeFqQYH5mWrfnMhLVR49fhwvg8DwVVwF2WqpvJRv9_itDin2VbiiT64nAEvMwopFZJp78x0uuFb3V-qjN2KB9dKvf9MNpLvp9U0VPT4vUz1ssg142TcOs7PfD9QSWBKBJOsCQP9u8YHLNMmNWOPqKa_VkXWMucJMRVU1z4ZrKZMhabTGo' 
+              img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCSTsd1X1rq3jMCrGEdsC6jETZEZSuyan7hAsrRQ7Zi0s_BEZ-mtvflLFlLp6HfzjoRyLTvon0FlW6255rEs9LwTMLnqZGSeFqQYH5mWrfnMhLVR49fhwvg8DwVVwF2WqpvJRv9_itDin2VbiiT64nAEvMwopFZJp78x0uuFb3V-qjN2KB9dKvf9MNpLvp9U0VPT4vUz1ssg142TcOs7PfD9QSWBKBJOsCQP9u8YHLNMmNWOPqKa_VkXWMucJMRVU1z4ZrKZMhabTGo',
+              to: '/terapia-familiar'
             },
             { 
               title: 'Atendimento para Adolescentes', 
               desc: 'Suporte emocional especializado para lidar com os desafios únicos das fases de transição, identidade e desenvolvimento.',
-              img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDHJs1oOBg1wdV4snDC2CWLe6w2Ioo1Iw2Uvvd6gFSLonwDk7YvgtetYZU5EK7HVwKVFnViq8uN2Gls1BcWNekwesMtYqUgi9fYaIieoFyae82FeB_nhokcfIaBiUpOEOk0ILqNoT-ppxRSjxTv4sJAoOwMeimAi0APHvGuw0ZgDZ_q5mcnjagV6qLsiXqNWHTxZoEcstjKDRSfo6U-s2RXw4GQe1xpIXNMFHPA985ndpfp_fq4RsYsblLzpTAJbnxGwVwdhmUF1Qde' 
+              img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDHJs1oOBg1wdV4snDC2CWLe6w2Ioo1Iw2Uvvd6gFSLonwDk7YvgtetYZU5EK7HVwKVFnViq8uN2Gls1BcWNekwesMtYqUgi9fYaIieoFyae82FeB_nhokcfIaBiUpOEOk0ILqNoT-ppxRSjxTv4sJAoOwMeimAi0APHvGuw0ZgDZ_q5mcnjagV6qLsiXqNWHTxZoEcstjKDRSfo6U-s2RXw4GQe1xpIXNMFHPA985ndpfp_fq4RsYsblLzpTAJbnxGwVwdhmUF1Qde',
+              to: '/adolescentes'
             },
             { 
               title: 'Soluções Corporativas', 
               desc: 'Programas estratégicos de bem-estar mental e saúde emocional para potencializar o capital humano em empresas.',
-              img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBVnPXPVARiI4Wn8ULWsyL2xIalumgtiBwlv9kSs3wSOYjjdeBtQC4HWp4YmTDAmGAe3mRlO73nN1L4769d0ZJnyJhPYfLTn3lHef7w3gWsKyFu1dM0L86-PBnhRJoFYMLzDDqp4X_N2dwbLOd_5DPwKRJinwOUceQIthkDFLPwYYRaYCKIDdX7ilXSG5ad3CV0BiAjwK8LKAJsclXSCkNvItyhO4CnFN7_IqXk6v1nHi2Kp5Vlqrk1u1wsbkhT6HWu2jP0meAmnqaB' 
+              img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBVnPXPVARiI4Wn8ULWsyL2xIalumgtiBwlv9kSs3wSOYjjdeBtQC4HWp4YmTDAmGAe3mRlO73nN1L4769d0ZJnyJhPYfLTn3lHef7w3gWsKyFu1dM0L86-PBnhRJoFYMLzDDqp4X_N2dwbLOd_5DPwKRJinwOUceQIthkDFLPwYYRaYCKIDdX7ilXSG5ad3CV0BiAjwK8LKAJsclXSCkNvItyhO4CnFN7_IqXk6v1nHi2Kp5Vlqrk1u1wsbkhT6HWu2jP0meAmnqaB',
+              to: '/solucoes-corporativas'
             }
           ].map((item) => (
             <div key={item.title} className="group flex flex-col bg-white rounded-xl overflow-hidden border border-slate-200 transition-all hover:shadow-xl hover:border-[#1f4d4a]/30">
@@ -44,7 +47,7 @@ const Atendimentos: React.FC = () => {
                 <p className="text-slate-600 text-sm leading-relaxed mb-6 flex-1 text-left">
                   {item.desc}
                 </p>
-                <Link to="/como-funciona" className="flex items-center gap-2 text-[#1f4d4a] font-bold text-sm uppercase tracking-wider group-hover:gap-3 transition-all">
+                <Link to={item.to} className="flex items-center gap-2 text-[#1f4d4a] font-bold text-sm uppercase tracking-wider group-hover:gap-3 transition-all">
                   Saiba mais <span className="material-symbols-outlined text-base">arrow_forward</span>
                 </Link>
               </div>

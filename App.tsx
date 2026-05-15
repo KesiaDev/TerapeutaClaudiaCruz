@@ -9,6 +9,10 @@ import Abordagem from './pages/Abordagem';
 import Conteudos from './pages/Conteudos';
 import Contact from './pages/Contact';
 import Terms from './pages/Terms';
+import TerapiaFamiliar from './pages/TerapiaFamiliar';
+import AtendimentoAdolescentes from './pages/AtendimentoAdolescentes';
+import SolucoesCorporativas from './pages/SolucoesCorporativas';
+import Agendar from './pages/Agendar';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
@@ -34,8 +38,12 @@ const App: React.FC = () => {
             <Route path="/sobre" element={<Sobre />} />
             <Route path="/abordagem" element={<Abordagem />} />
             <Route path="/conteudos" element={<Conteudos />} />
+            <Route path="/terapia-familiar" element={<TerapiaFamiliar />} />
+            <Route path="/adolescentes" element={<AtendimentoAdolescentes />} />
+            <Route path="/solucoes-corporativas" element={<SolucoesCorporativas />} />
             <Route path="/contato" element={<Contact />} />
             <Route path="/termos" element={<Terms />} />
+            <Route path="/agendar" element={<Agendar />} />
           </Routes>
         </main>
         <Footer />
