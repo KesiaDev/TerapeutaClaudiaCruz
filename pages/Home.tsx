@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import abordagemSessao from '../src/assets/DSC02175.jpg';
-import claudiaHero from '../src/assets/DSC02183.jpg';
+import claudiaHero from '../src/assets/DSC02220.jpg';
 
 const Home: React.FC = () => {
   return (
