@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import claudiaHero from '../src/assets/DSC02183.jpg';
+import claudiaHero from '../src/assets/DSC02220.jpg';
 import claudiaTcc from '../src/assets/DSC02187.jpg';
 import claudiaCoach from '../src/assets/DSC02190.jpg';
 
